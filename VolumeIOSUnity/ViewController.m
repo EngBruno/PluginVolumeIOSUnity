@@ -7,21 +7,34 @@
 //
 
 #import "ViewController.h"
+#import  <MediaPlayer/MediaPlayer.h>
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+{
+    AVAudioSession* audioSession;
+}
+- (void)viewWillAppear:(BOOL)animated {
+    
+    audioSession = [AVAudioSession sharedInstance];
+    
+    [audioSession setActive:YES error:nil];
+    [audioSession addObserver:self forKeyPath:@"outputVolume" options:0 context:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    
+    if ([keyPath isEqual:@"outputVolume"]) {
+        NSLog(@"%f",audioSession.outputVolume);
+    }
 }
 
 @end

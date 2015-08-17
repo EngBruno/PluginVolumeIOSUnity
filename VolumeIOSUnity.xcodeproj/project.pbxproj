@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150975991B8214BB0063A196 /* ControllerVolumeIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 150975981B8214BB0063A196 /* ControllerVolumeIOS.mm */; };
 		15EDF46E1B7E42D6003AA827 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EDF46D1B7E42D6003AA827 /* main.m */; };
 		15EDF4711B7E42D6003AA827 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EDF4701B7E42D6003AA827 /* AppDelegate.m */; };
 		15EDF4741B7E42D6003AA827 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EDF4731B7E42D6003AA827 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		150975971B8214BB0063A196 /* ControllerVolumeIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerVolumeIOS.h; sourceTree = "<group>"; };
+		150975981B8214BB0063A196 /* ControllerVolumeIOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ControllerVolumeIOS.mm; sourceTree = "<group>"; };
 		15EDF4681B7E42D6003AA827 /* VolumeIOSUnity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeIOSUnity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EDF46C1B7E42D6003AA827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15EDF46D1B7E42D6003AA827 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1509759A1B8214C70063A196 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				150975971B8214BB0063A196 /* ControllerVolumeIOS.h */,
+				150975981B8214BB0063A196 /* ControllerVolumeIOS.mm */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 		15EDF45F1B7E42D6003AA827 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 		15EDF46A1B7E42D6003AA827 /* VolumeIOSUnity */ = {
 			isa = PBXGroup;
 			children = (
+				1509759A1B8214C70063A196 /* Class */,
 				15EDF46F1B7E42D6003AA827 /* AppDelegate.h */,
 				15EDF4701B7E42D6003AA827 /* AppDelegate.m */,
 				15EDF4721B7E42D6003AA827 /* ViewController.h */,
@@ -168,6 +181,7 @@
 				TargetAttributes = {
 					15EDF4671B7E42D6003AA827 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 8R282G256M;
 					};
 					15EDF4801B7E42D6003AA827 = {
 						CreatedOnToolsVersion = 6.4;
@@ -222,6 +236,7 @@
 				15EDF4741B7E42D6003AA827 /* ViewController.m in Sources */,
 				15EDF4711B7E42D6003AA827 /* AppDelegate.m in Sources */,
 				15EDF46E1B7E42D6003AA827 /* main.m in Sources */,
+				150975991B8214BB0063A196 /* ControllerVolumeIOS.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +364,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VolumeIOSUnity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +378,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VolumeIOSUnity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +441,7 @@
 				15EDF48D1B7E42D6003AA827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15EDF48E1B7E42D6003AA827 /* Build configuration list for PBXNativeTarget "VolumeIOSUnityTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +450,7 @@
 				15EDF4901B7E42D6003AA827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
