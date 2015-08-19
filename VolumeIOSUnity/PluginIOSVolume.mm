@@ -6,35 +6,45 @@
 //  Copyright (c) 2015 Bruno. All rights reserved.
 //
 
-#import "ViewController.h"
-#import  <MediaPlayer/MediaPlayer.h>
+#import "PluginIOSVolume.h"
 
-@interface ViewController ()
+@implementation PluginIOSVolume{
 
-@end
-
-@implementation ViewController
-{
-    AVAudioSession* audioSession;
 }
-- (void)viewWillAppear:(BOOL)animated {
-    
+- (id)init
+{
+    self = [super init];
     audioSession = [AVAudioSession sharedInstance];
-    
     [audioSession setActive:YES error:nil];
     [audioSession addObserver:self forKeyPath:@"outputVolume" options:0 context:nil];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    volumeDevice = 0;
+    return self;
 }
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
     if ([keyPath isEqual:@"outputVolume"]) {
         NSLog(@"%f",audioSession.outputVolume);
+        volumeDevice = audioSession.outputVolume;
     }
 }
 
+-(float) getVolumeDevice{
+    return volumeDevice;
+}
+
 @end
+static PluginIOSVolume* delegateObject=nil;
+extern "C"{
+    
+    void _StartClass(){
+        if(delegateObject == nil){
+            delegateObject = [[PluginIOSVolume alloc] init];
+        }
+    }
+    
+    
+    float _GetVolume(){
+        return [delegateObject getVolumeDevice];
+    }
+}

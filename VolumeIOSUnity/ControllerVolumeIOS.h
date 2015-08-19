@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Bruno. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+//#import <MediaPlayer/MediaPlayer.h>
 
-@interface ControllerVolumeIOS : NSObject
+@interface ControllerVolumeIOS : UIViewController
 
 @end

@@ -10,7 +10,7 @@
 		150975991B8214BB0063A196 /* ControllerVolumeIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 150975981B8214BB0063A196 /* ControllerVolumeIOS.mm */; };
 		15EDF46E1B7E42D6003AA827 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EDF46D1B7E42D6003AA827 /* main.m */; };
 		15EDF4711B7E42D6003AA827 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EDF4701B7E42D6003AA827 /* AppDelegate.m */; };
-		15EDF4741B7E42D6003AA827 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EDF4731B7E42D6003AA827 /* ViewController.m */; };
+		15EDF4741B7E42D6003AA827 /* PluginIOSVolume.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15EDF4731B7E42D6003AA827 /* PluginIOSVolume.mm */; };
 		15EDF4771B7E42D6003AA827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EDF4751B7E42D6003AA827 /* Main.storyboard */; };
 		15EDF4791B7E42D6003AA827 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EDF4781B7E42D6003AA827 /* Images.xcassets */; };
 		15EDF47C1B7E42D6003AA827 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EDF47A1B7E42D6003AA827 /* LaunchScreen.xib */; };
@@ -35,8 +35,8 @@
 		15EDF46D1B7E42D6003AA827 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15EDF46F1B7E42D6003AA827 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15EDF4701B7E42D6003AA827 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15EDF4721B7E42D6003AA827 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		15EDF4731B7E42D6003AA827 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		15EDF4721B7E42D6003AA827 /* PluginIOSVolume.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PluginIOSVolume.h; sourceTree = "<group>"; };
+		15EDF4731B7E42D6003AA827 /* PluginIOSVolume.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PluginIOSVolume.mm; sourceTree = "<group>"; };
 		15EDF4761B7E42D6003AA827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15EDF4781B7E42D6003AA827 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15EDF47B1B7E42D6003AA827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 				1509759A1B8214C70063A196 /* Class */,
 				15EDF46F1B7E42D6003AA827 /* AppDelegate.h */,
 				15EDF4701B7E42D6003AA827 /* AppDelegate.m */,
-				15EDF4721B7E42D6003AA827 /* ViewController.h */,
-				15EDF4731B7E42D6003AA827 /* ViewController.m */,
+				15EDF4721B7E42D6003AA827 /* PluginIOSVolume.h */,
+				15EDF4731B7E42D6003AA827 /* PluginIOSVolume.mm */,
 				15EDF4751B7E42D6003AA827 /* Main.storyboard */,
 				15EDF4781B7E42D6003AA827 /* Images.xcassets */,
 				15EDF47A1B7E42D6003AA827 /* LaunchScreen.xib */,
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15EDF4741B7E42D6003AA827 /* ViewController.m in Sources */,
+				15EDF4741B7E42D6003AA827 /* PluginIOSVolume.mm in Sources */,
 				15EDF4711B7E42D6003AA827 /* AppDelegate.m in Sources */,
 				15EDF46E1B7E42D6003AA827 /* main.m in Sources */,
 				150975991B8214BB0063A196 /* ControllerVolumeIOS.mm in Sources */,

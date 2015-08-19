@@ -8,12 +8,16 @@
 
 #import "ControllerVolumeIOS.h"
 
+@interface ControllerVolumeIOS ()
+
+@end
+
 @implementation ControllerVolumeIOS
 
 - (id)init
 {
     self = [super init];
-        return self;
+    return self;
 }
 
 -(void)volumeDidChange{

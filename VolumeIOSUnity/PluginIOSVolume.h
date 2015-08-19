@@ -6,10 +6,14 @@
 //  Copyright (c) 2015 Bruno. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+//#import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface PluginIOSVolume : NSObject{
+    AVAudioSession* audioSession;
+    float volumeDevice;
+}
 
+-(float)getVolumeDevice;
 @end
 
