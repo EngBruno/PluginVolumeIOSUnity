@@ -12,8 +12,11 @@
 @interface PluginIOSVolume : NSObject{
     AVAudioSession* audioSession;
     float volumeDevice;
+    BOOL inputButtonVolume;
 }
 
 -(float)getVolumeDevice;
+-(BOOL) getInputButtonVolume;
+-(void) setInputButtonVolumeFalse;
 @end
 

@@ -24,13 +24,21 @@
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
     if ([keyPath isEqual:@"outputVolume"]) {
-        NSLog(@"%f",audioSession.outputVolume);
         volumeDevice = audioSession.outputVolume;
+        inputButtonVolume = true;
     }
 }
 
 -(float) getVolumeDevice{
     return volumeDevice;
+}
+
+-(BOOL) getInputButtonVolume{
+    return inputButtonVolume;
+}
+
+-(void) setInputButtonVolumeFalse{
+    inputButtonVolume=false;
 }
 
 @end
@@ -43,8 +51,15 @@ extern "C"{
         }
     }
     
-    
     float _GetVolume(){
         return [delegateObject getVolumeDevice];
+    }
+    
+    BOOL _GetInputButtonVolume(){
+        return [delegateObject getInputButtonVolume];
+    }
+    
+    void _SetInputButtonVolumeFalse(){
+        [delegateObject setInputButtonVolumeFalse];
     }
 }
