@@ -9,6 +9,8 @@
 #import "PluginIOSVolume.h"
 
 @implementation PluginIOSVolume{
+    BOOL isDoubleClick;
+    NSTimer *doubleClickTimer;
 
 }
 - (id)init
@@ -41,6 +43,10 @@
     inputButtonVolume=false;
 }
 
+-(BOOL) getDoubleClick{
+    return isDoubleClick;
+}
+
 @end
 static PluginIOSVolume* delegateObject=nil;
 extern "C"{
@@ -61,5 +67,9 @@ extern "C"{
     
     void _SetInputButtonVolumeFalse(){
         [delegateObject setInputButtonVolumeFalse];
+    }
+    
+    BOOL _GetDoubleClick(){
+        return [delegateObject getDoubleClick];
     }
 }

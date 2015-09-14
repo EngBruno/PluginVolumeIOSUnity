@@ -18,5 +18,6 @@
 -(float)getVolumeDevice;
 -(BOOL) getInputButtonVolume;
 -(void) setInputButtonVolumeFalse;
+-(BOOL) getDoubleClick;
 @end
 

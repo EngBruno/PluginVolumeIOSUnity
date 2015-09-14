@@ -75,6 +75,10 @@
 -(void) setInputButtonVolumeFalse{
      inputButtonVolume=false;
 }
+
+-(BOOL) getDoubleClick{
+    return isDoubleClick;
+}
 /*
 #pragma mark - Navigation
 
