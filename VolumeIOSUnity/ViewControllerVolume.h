@@ -14,6 +14,7 @@
     float volumeDevice;
     BOOL inputButtonVolume;
 }
+- (IBAction)buttonVolume:(UIButton *)sender;
 
 
 @end
